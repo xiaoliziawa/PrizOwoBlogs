@@ -199,6 +199,14 @@ document.addEventListener('DOMContentLoaded', function () {
             image: "images/anning.avif",
             link: "https://space.bilibili.com/605013808?spm_id_from=333.337.0.0",
             category: 5
+        },
+        {
+            id: 26,
+            title: "芒果冻布丁",
+            description: "分享关于KubeJS的有趣案例以及一些有趣的Minecraft视频",
+            image: "images/mango.avif",
+            link: "https://space.bilibili.com/430008973",
+            category: 5
         }
     ];
 
