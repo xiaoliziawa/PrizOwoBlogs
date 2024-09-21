@@ -159,6 +159,38 @@ document.addEventListener('DOMContentLoaded', function () {
             image: "images/icon-creeper.png",
             link: "https://misode.github.io/",
             category: 1
+        },
+        {
+            id: 21,
+            title: "Plotz",
+            description: "一款适用于Minecraft的免费 HTML5 建模器\n在网络浏览器中生成球体、椭球体、环面等。可以配合投影模组使用。",
+            image: "images/plotz.png",
+            link: "https://www.plotz.co.uk/",
+            category: 1
+        },
+        {
+            id: 22,
+            title: "Minecraft Schematics",
+            description: "建筑投影地图下载",
+            image: "images/blueprint_100.webp",
+            link: "https://www.minecraft-schematics.com/",
+            category: 1
+        },
+        {
+            id: 23,
+            title: "吕不才",
+            description: "分享关于KubeJS的教程以及案例",
+            image: "https://i2.hdslb.com/bfs/face/ddd54d27009c7661626a4ce554b0c989d3430faf.jpg@240w_240h_1c_1s_!web-avatar-space-header.avif",
+            link: "https://space.bilibili.com/9456011",
+            category: 5
+        },
+        {
+            id: 24,
+            title: "是孤梦啊",
+            description: "分享关于KubeJS的教程以及案例",
+            image: "https://i0.hdslb.com/bfs/face/fe7554a8547861ce033a0d9194ce8067d22137dc.jpg@240w_240h_1c_1s_!web-avatar-space-header.avif",
+            link: "https://space.bilibili.com/16632546?spm_id_from=333.337.0.0",
+            category: 5
         }
     ];
 
