@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 23,
             title: "吕不才",
             description: "分享关于KubeJS的教程以及案例",
-            image: "https://i2.hdslb.com/bfs/face/ddd54d27009c7661626a4ce554b0c989d3430faf.jpg@240w_240h_1c_1s_!web-avatar-space-header.avif",
+            image: "images/lvbucai.avif",
             link: "https://space.bilibili.com/9456011",
             category: 5
         },
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 24,
             title: "是孤梦啊",
             description: "分享关于KubeJS的教程以及案例",
-            image: "https://i0.hdslb.com/bfs/face/fe7554a8547861ce033a0d9194ce8067d22137dc.jpg@240w_240h_1c_1s_!web-avatar-space-header.avif",
+            image: "images/gumeng.avif",
             link: "https://space.bilibili.com/16632546?spm_id_from=333.337.0.0",
             category: 5
         }
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.querySelectorAll('#top-nav a').forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             if (this.getAttribute('href').startsWith('#')) {
                 e.preventDefault();
                 var target = this.getAttribute('href');
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     window.addEventListener('resize', adjustCardLayout);
-    adjustCardLayout(); 
+    adjustCardLayout();
 
     document.documentElement.style.setProperty('--primary-color', '#新颜色');
 
@@ -293,11 +293,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('mainStylesheet').href = addRandomQueryToURL('css/style.css');
 
     document.querySelectorAll('.menu-items a').forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             if (this.getAttribute('href').startsWith('#')) {
                 e.preventDefault();
                 var target = this.getAttribute('href');
-                smoothScroll(target, 1000); 
+                smoothScroll(target, 1000);
             }
         });
     });
