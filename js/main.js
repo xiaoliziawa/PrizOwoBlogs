@@ -191,6 +191,14 @@ document.addEventListener('DOMContentLoaded', function () {
             image: "images/gumeng.avif",
             link: "https://space.bilibili.com/16632546?spm_id_from=333.337.0.0",
             category: 5
+        },
+        {
+            id: 25,
+            title: "安宁uiu",
+            description: "分享关于KubeJS的有趣案例",
+            image: "images/anning.avif",
+            link: "https://space.bilibili.com/605013808?spm_id_from=333.337.0.0",
+            category: 5
         }
     ];
 
