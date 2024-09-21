@@ -18,8 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    position: relative;
-    padding-bottom: 50px; /* 根据footer的高度调整 */
 }
 
 .container {
@@ -30,7 +28,7 @@ body {
 
 header {
     background-color: var(--card-background);
-    padding: 10px 0; /* 从20px减小到10px */
+    padding: 20px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -47,7 +45,7 @@ header .container {
 
 header h1 {
     margin: 0;
-    font-size: 2rem; /* 从2.5rem减小到2rem */
+    font-size: 2.5rem;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
     flex: 0 0 auto;
@@ -160,7 +158,7 @@ h2::after {
     display: flex;
     flex-direction: column;
     height: auto;
-    transition: all 0.3s ease, transform 0.3s ease; /* 添加 transform 过渡效果 */
+    transition: all 0.3s ease, transform 0.3s ease;
     background-color: var(--card-background);
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -170,8 +168,8 @@ h2::after {
 }
 
 .card:hover {
-    transform: translateY(-5px); /* 加悬浮效果 */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .card-content {
@@ -195,11 +193,11 @@ h2::after {
     margin-bottom: 8px;
     overflow: hidden;
     transition: max-height 0.5s ease;
-    max-height: 58.5px; /* 3行文字的高度 */
+    max-height: 58.5px;
 }
 
 .card.expanded .card-content p {
-    max-height: 300px; /* 展开时的最大高度 */
+    max-height: 300px;
 }
 
 .read-more {
@@ -243,9 +241,9 @@ footer {
     background-color: var(--footer-background);
     color: var(--footer-text);
     text-align: center;
-    padding: 15px 0;  /* 减小上下内边距 */
-    font-size: 0.9rem;  /* 减小字体大小 */
-    position: absolute;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    position: sticky;
     bottom: 0;
     width: 100%;
     z-index: 1000;
@@ -255,11 +253,11 @@ footer .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;  /* 设置一个固定高度 */
+    height: 30px;
 }
 
 footer p {
-    margin: 0;  /* 移除段落的默认边距 */
+    margin: 0;
 }
 
 .footer-content {
@@ -488,11 +486,11 @@ h2 {
     margin-bottom: 8px;
     overflow: hidden;
     transition: max-height 0.5s ease;
-    max-height: 58.5px; /* 3行文字的高度 */
+    max-height: 58.5px;
 }
 
 .card:hover .card-content p {
-    max-height: none; /* 移除这行 */
+    max-height: none;
 }
 
 .hamburger-menu {
@@ -513,7 +511,7 @@ h2 {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: var(--primary-color); /* 改为蓝色 */
+    background-color: var(--text-color);
     transition: all 0.3s ease;
 }
 
@@ -564,19 +562,17 @@ h2 {
     }
 }
 
-/* 调整导航栏布局 */
 nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-/* 美化汉堡菜单图标 */
 .hamburger-menu {
     position: relative;
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .hamburger-icon {
@@ -592,12 +588,11 @@ nav {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: var(--primary-color); /* 改为蓝色 */
+    background-color: var(--text-color);
     transition: all 0.3s ease;
     border-radius: 2px;
 }
 
-/* 美化展开后的菜单框 */
 .menu-items {
     position: absolute;
     top: 100%;
@@ -637,7 +632,6 @@ nav {
     color: white;
 }
 
-/* 调整GitHub链接样式 */
 .github-link {
     display: flex;
     align-items: center;

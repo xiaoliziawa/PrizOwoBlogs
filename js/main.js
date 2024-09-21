@@ -143,6 +143,14 @@ document.addEventListener('DOMContentLoaded', function () {
             image: "images/cm.png",
             link: "https://frinn.gitbook.io/custom-machinery-1.21",
             category: 3
+        },
+        {
+            id: 19,
+            title: "KubeJS 中文论坛",
+            description: "KubeJS 中文论坛,可以翻到许多大佬的教程",
+            image: "images/kubejs.png",
+            link: "https://kjscndev.flarum.cloud/",
+            category: 4
         }
     ];
 
@@ -194,7 +202,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderCards();
 
-    // 添加平滑滚动功能
     function smoothScroll(target, duration) {
         var targetElement = document.querySelector(target);
         var targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
@@ -220,13 +227,12 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(animation);
     }
 
-    // 为导航链接添加点击事件监听器
     document.querySelectorAll('#top-nav a').forEach(link => {
         link.addEventListener('click', function(e) {
             if (this.getAttribute('href').startsWith('#')) {
                 e.preventDefault();
                 var target = this.getAttribute('href');
-                smoothScroll(target, 1000); // 1000ms = 1秒的动画时间
+                smoothScroll(target, 1000);
             }
         });
     });
@@ -246,13 +252,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('mainStylesheet').href = addRandomQueryToURL('css/style.css');
 
-    // 为菜单项添加点击事件监听器
     document.querySelectorAll('.menu-items a').forEach(link => {
         link.addEventListener('click', function(e) {
             if (this.getAttribute('href').startsWith('#')) {
                 e.preventDefault();
                 var target = this.getAttribute('href');
-                smoothScroll(target, 1000); // 1000ms = 1秒的动画时间
+                smoothScroll(target, 1000); 
             }
         });
     });
