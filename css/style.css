@@ -243,10 +243,7 @@ footer {
     text-align: center;
     padding: 15px 0;
     font-size: 0.9rem;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    z-index: 1000;
 }
 
 footer .container {
@@ -338,6 +335,10 @@ footer p {
 
     .footer-section {
         margin-right: 0;
+    }
+
+    main {
+        margin-bottom: 0;
     }
 }
 
