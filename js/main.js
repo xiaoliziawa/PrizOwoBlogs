@@ -151,6 +151,14 @@ document.addEventListener('DOMContentLoaded', function () {
             image: "images/kubejs.png",
             link: "https://kjscndev.flarum.cloud/",
             category: 4
+        },
+        {
+            id: 20,
+            title: "数据包生成器",
+            description: "GIthub的开源项目Data Pack Generators,可以让你快速生成一个数据包,避免了繁琐的JSON填写过程",
+            image: "images/icon-creeper.png",
+            link: "https://misode.github.io/",
+            category: 1
         }
     ];
 
