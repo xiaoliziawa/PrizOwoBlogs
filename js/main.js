@@ -221,12 +221,10 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         `;
         
-        // 为整个卡片添加点击事件
         card.addEventListener('click', function() {
             window.open(post.link, '_blank');
         });
         
-        // 添加鼠标悬停效果，表明卡片可点击
         card.style.cursor = 'pointer';
         
         return card;
@@ -304,7 +302,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', adjustCardLayout);
     adjustCardLayout();
 
-    // document.documentElement.style.setProperty('--primary-color', '#新颜色');
 
     function forceRefresh() {
         location.reload(true);
