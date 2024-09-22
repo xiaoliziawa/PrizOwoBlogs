@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 4,
             title: "Minecraft Wiki",
-            description: "Minecraft 中文Wiki是一个由玩家和开发者同维护的关于Minecraft的百科全书。\n 在这上面你可以查询任何关于Minecraft的资料以及更新信息",
+            description: "Minecraft 中文Wiki是一个由玩家和开发者共同维护的关于Minecraft的百科全书。\n 在这上面你可以查询任何关于Minecraft的资料以及更新信息",
             image: "https://th.bing.com/th/id/OIP.CV9L-PCKb75C6twh5-x52QAAAA?w=156&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7",
             link: "https://zh.minecraft.wiki/",
             category: 1
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 12,
             title: "Plant Minecraft",
-            description: "一个Minecraft的资源网站,MC地球",
+            description: "一个Minecraft的资源网站,MC球",
             image: "images/plantmc.png",
             link: "https://www.planetminecraft.com/",
             category: 1
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 20,
             title: "数据包生成器",
-            description: "GIthub的开源项目Data Pack Generators,可以让你快速生成一个数据包,避免了繁琐的JSON填写过程",
+            description: "GIthub的���源项目Data Pack Generators,可以让你快速生成一个数据包,避免了繁琐的JSON填写过程",
             image: "images/icon-creeper.png",
             link: "https://misode.github.io/",
             category: 1
@@ -218,9 +218,17 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="card-content">
                 <h3>${post.title}</h3>
                 <p id="card-description-${post.id}">${post.description.replace(/\n/g, '<br>')}</p>
-                <a href="${post.link}" class="read-more" target="_blank">More Information</a>
             </div>
         `;
+        
+        // 为整个卡片添加点击事件
+        card.addEventListener('click', function() {
+            window.open(post.link, '_blank');
+        });
+        
+        // 添加鼠标悬停效果，表明卡片可点击
+        card.style.cursor = 'pointer';
+        
         return card;
     }
 
@@ -296,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', adjustCardLayout);
     adjustCardLayout();
 
-    document.documentElement.style.setProperty('--primary-color', '#新颜色');
+    // document.documentElement.style.setProperty('--primary-color', '#新颜色');
 
     function forceRefresh() {
         location.reload(true);
