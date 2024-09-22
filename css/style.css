@@ -18,12 +18,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -34,6 +37,9 @@ header {
     top: 0;
     z-index: 1000;
     border-top: 5px solid var(--primary-color);
+    width: 100%;
+    left: 0;
+    right: 0;
 }
 
 header .container {
@@ -41,6 +47,10 @@ header .container {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 header h1 {
@@ -101,6 +111,8 @@ main {
     padding: 40px 0;
     background-color: var(--background-color);
     flex: 1;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -244,6 +256,8 @@ footer {
     padding: 15px 0;
     font-size: 0.9rem;
     width: 100%;
+    left: 0;
+    right: 0;
 }
 
 footer .container {
@@ -251,6 +265,10 @@ footer .container {
     justify-content: center;
     align-items: center;
     height: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 footer p {
@@ -669,30 +687,38 @@ nav {
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+    width: 100%;
   }
 
   .container {
     width: 100%;
     max-width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
     box-sizing: border-box;
   }
 
-  header {
-    width: 100vw;
-    max-width: 100vw;
+  header, footer {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
     padding: 10px 0;
     box-sizing: border-box;
   }
 
-  header .container {
+  header .container, footer .container {
     padding: 0 15px;
+    width: 100%;
+    max-width: 100%;
   }
 
   header h1 {
     font-size: 1.5rem;
     padding-right: 0;
+    width: 100%;
+    text-align: center;
   }
 
   nav {
@@ -703,6 +729,7 @@ nav {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0;
   }
 
   nav ul li {
@@ -711,20 +738,20 @@ nav {
 
   .hamburger-menu {
     margin-right: 0;
+    position: absolute;
+    right: 15px;
+    top: 15px;
   }
 
   .github-link {
-    margin-left: 10px;
+    position: absolute;
+    right: 50px;
+    top: 15px;
   }
 
   main {
-    padding: 20px 0;
-  }
-
-  footer {
-    width: 100vw;
-    max-width: 100vw;
-    padding: 15px 0;
+    padding: 20px 15px;
+    width: 100%;
     box-sizing: border-box;
   }
 }
