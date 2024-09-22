@@ -171,7 +171,6 @@ h2::after {
 .card {
     display: flex;
     flex-direction: column;
-    height: auto;
     transition: all 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--card-background);
     border-radius: 12px;
@@ -192,7 +191,6 @@ h2::after {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .card-content h3 {
@@ -208,12 +206,7 @@ h2::after {
     line-height: 1.5;
     margin-bottom: 8px;
     overflow: hidden;
-    transition: max-height 0.5s ease;
-    max-height: 58.5px;
-}
-
-.card.expanded .card-content p {
-    max-height: 300px;
+    transition: height 0.3s ease, overflow 0.3s ease;
 }
 
 .read-more {
@@ -508,12 +501,12 @@ h2 {
     line-height: 1.5;
     margin-bottom: 8px;
     overflow: hidden;
-    transition: max-height 0.5s ease;
-    max-height: 58.5px;
+    transition: height 0.3s ease, overflow 0.3s ease;
 }
 
 .card:hover .card-content p {
-    max-height: none;
+    height: auto;
+    overflow: visible;
 }
 
 .hamburger-menu {

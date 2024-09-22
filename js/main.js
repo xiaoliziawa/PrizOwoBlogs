@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 20,
             title: "数据包生成器",
-            description: "GIthub的���源项目Data Pack Generators,可以让你快速生成一个数据包,避免了繁琐的JSON填写过程",
+            description: "GIthub的源项目Data Pack Generators,可以让你快速生成一个数据包,避免了繁琐的JSON填写过程",
             image: "images/icon-creeper.png",
             link: "https://misode.github.io/",
             category: 1
@@ -241,22 +241,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const content = card.querySelector('.card-content');
                 const paragraph = content.querySelector('p');
-                let expanded = false;
-                let originalHeight = paragraph.clientHeight;
-                let expandedHeight = paragraph.scrollHeight;
-
+                
+                // 设置初始高度
+                paragraph.style.height = 'auto';
+                const fullHeight = paragraph.offsetHeight;
+                paragraph.style.height = '58px'; // 初始显示约3行文字
+                
                 card.addEventListener('mouseenter', () => {
-                    if (!expanded) {
-                        paragraph.style.maxHeight = `${expandedHeight}px`;
-                        expanded = true;
-                    }
+                    paragraph.style.height = `${fullHeight}px`;
+                    paragraph.style.overflow = 'visible';
                 });
 
                 card.addEventListener('mouseleave', () => {
-                    if (expanded) {
-                        paragraph.style.maxHeight = `${originalHeight}px`;
-                        expanded = false;
-                    }
+                    paragraph.style.height = '58px';
+                    paragraph.style.overflow = 'hidden';
                 });
             });
         });
