@@ -108,4 +108,25 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // 修改烟花效果触发方式
+    document.addEventListener('mousemove', (e) => {
+        createFirework(e.clientX, e.clientY);
+    });
+
+    // document.addEventListener('click', (e) => {
+    //     createFirework(e.clientX, e.clientY);
+    // });
+
+    function createFirework(x, y) {
+        const firework = document.createElement('div');
+        firework.className = 'firework';
+        firework.style.left = x + 'px';
+        firework.style.top = y + 'px';
+        document.body.appendChild(firework);
+
+        setTimeout(() => {
+            firework.remove();
+        }, 1000);
+    }
 });

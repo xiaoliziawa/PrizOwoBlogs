@@ -33,16 +33,21 @@ body {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 确保header在最上层 */
     background-color: rgba(30, 30, 30, 0.8);
     backdrop-filter: blur(10px);
     padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     border-top: 5px solid var(--secondary-color);
+}
+
+header.fixed-header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    left: 0;
-    right: 0;
+    z-index: 1000; /* 确保header最上层 */
 }
 
 header .container {
@@ -565,6 +570,8 @@ h2 {
     transform: translateY(-10px);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column; /* 修改为竖向排列 */
 }
 
 .hamburger-menu:hover .menu-items {
@@ -644,6 +651,8 @@ nav {
     transform: translateY(-10px);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column; /* 修改为竖向排列 */
 }
 
 .hamburger-menu:hover .menu-items {
@@ -783,6 +792,64 @@ nav {
   height: 100%;
   pointer-events: none;
   z-index: 9999;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary-color);
 }
 
 #particle-background {
@@ -937,4 +1004,15 @@ header {
 
 h2, .card-content h3, .card-content p {
   color: #ffffff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 确保header在最上层 */
+    background-color: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    border-top: 5px solid var(--secondary-color);
 }

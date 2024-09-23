@@ -35,6 +35,45 @@ class Particle {
   }
 }
 
+class HeartParticle {
+  constructor(x, y, color) {
+    this.x = x;
+    this.y = y;
+    this.color = color;
+    this.size = Math.random() * 10 + 5;
+    this.speedX = Math.random() * 3 - 1.5;
+    this.speedY = Math.random() * 3 - 1.5;
+    this.lifetime = 100;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    this.lifetime--;
+  }
+
+  draw() {
+    const opacity = this.lifetime / 100;
+    ctx.save();
+    ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${opacity})`;
+    ctx.beginPath();
+    ctx.moveTo(this.x, this.y);
+    ctx.bezierCurveTo(
+      this.x - this.size / 2, this.y - this.size / 2,
+      this.x - this.size, this.y + this.size / 3,
+      this.x, this.y + this.size
+    );
+    ctx.bezierCurveTo(
+      this.x + this.size, this.y + this.size / 3,
+      this.x + this.size / 2, this.y - this.size / 2,
+      this.x, this.y
+    );
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
 function createFirework(x, y) {
   const particleCount = 50;
   const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
@@ -47,7 +86,24 @@ function createFirework(x, y) {
   return particles;
 }
 
+function createHeartAnimation(x, y) {
+  const particleCount = 20;
+  const color = {
+    r: Math.floor(Math.random() * 255),
+    g: Math.floor(Math.random() * 255),
+    b: Math.floor(Math.random() * 255)
+  };
+  const particles = [];
+
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(new HeartParticle(x, y, color));
+  }
+
+  return particles;
+}
+
 let fireworks = [];
+let hearts = [];
 
 function animate() {
   requestAnimationFrame(animate);
@@ -67,14 +123,29 @@ function animate() {
       fireworks.splice(index, 1);
     }
   });
+
+  hearts.forEach((particles, index) => {
+    particles.forEach((particle, particleIndex) => {
+      if (particle.lifetime > 0) {
+        particle.draw();
+        particle.update();
+      } else {
+        particles.splice(particleIndex, 1);
+      }
+    });
+
+    if (particles.length === 0) {
+      hearts.splice(index, 1);
+    }
+  });
 }
 
 let isMouseDown = false;
 let lastMousePosition = { x: 0, y: 0 };
 
-document.addEventListener('click', (e) => {
-  fireworks.push(createFirework(e.clientX, e.clientY));
-});
+// document.addEventListener('click', (e) => {
+//   fireworks.push(createFirework(e.clientX, e.clientY));
+// });
 
 document.addEventListener('mousedown', (e) => {
   isMouseDown = true;
@@ -82,17 +153,15 @@ document.addEventListener('mousedown', (e) => {
 });
 
 document.addEventListener('mousemove', (e) => {
-  if (isMouseDown) {
-    const currentPosition = { x: e.clientX, y: e.clientY };
-    const distance = Math.sqrt(
-      Math.pow(currentPosition.x - lastMousePosition.x, 2) +
-      Math.pow(currentPosition.y - lastMousePosition.y, 2)
-    );
+  const currentPosition = { x: e.clientX, y: e.clientY };
+  const distance = Math.sqrt(
+    Math.pow(currentPosition.x - lastMousePosition.x, 2) +
+    Math.pow(currentPosition.y - lastMousePosition.y, 2)
+  );
 
-    if (distance > 10) {
-      fireworks.push(createFirework(currentPosition.x, currentPosition.y));
-      lastMousePosition = currentPosition;
-    }
+  if (distance > 10) {
+    fireworks.push(createFirework(currentPosition.x, currentPosition.y));
+    lastMousePosition = currentPosition;
   }
 });
 
@@ -102,6 +171,10 @@ document.addEventListener('mouseup', () => {
 
 document.addEventListener('selectstart', (e) => {
   e.preventDefault();
+});
+
+document.addEventListener('click', (e) => {
+  hearts.push(createHeartAnimation(e.clientX, e.clientY));
 });
 
 animate();
