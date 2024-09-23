@@ -226,9 +226,9 @@ const blogPosts = [
     {
         id: 29,
         title: "Feed The Beast",
-        description: "FTB官方网站,上面有许多FTB官方整合包下载,前提是下载FTB官方自己的启动器(吐槽)",
+        description: "FTB官方网站,上面有许多FTB官方整合包下载,前提是下载FTB官方自己的启动器（吐槽）",
         image: "images/ftb.svg",
         link: "https://www.feed-the-beast.com/",
         category: 1
-    }
+    },
 ];
