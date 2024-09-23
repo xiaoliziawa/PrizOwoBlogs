@@ -120,7 +120,7 @@ class BackgroundParticle {
   constructor() {
     this.x = Math.random() * bgCanvas.width;
     this.y = Math.random() * bgCanvas.height;
-    this.size = Math.random() * 2 + 0.5;
+    this.size = Math.random() * 4 + 1;
     this.speedX = Math.random() * 0.3 - 0.15;
     this.speedY = Math.random() * 0.3 - 0.15;
   }
@@ -137,7 +137,7 @@ class BackgroundParticle {
   }
 
   draw() {
-    bgCtx.fillStyle = 'rgba(74, 225, 233, 0.5)';
+    bgCtx.fillStyle = 'rgba(74, 225, 233, 0.7)'; // 增加不透明度，使粒子更亮
     bgCtx.beginPath();
     bgCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     bgCtx.fill();
@@ -165,10 +165,10 @@ function animateBackground() {
       const dy = particleArray[i].y - particleArray[j].y;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < 100) {
+      if (distance < 120) {
         bgCtx.beginPath();
-        bgCtx.strokeStyle = `rgba(74, 225, 233, ${0.2 - distance / 500})`;
-        bgCtx.lineWidth = 0.5;
+        bgCtx.strokeStyle = `rgba(74, 225, 233, ${0.3 - distance / 400})`;
+        bgCtx.lineWidth = 0.6;
         bgCtx.moveTo(particleArray[i].x, particleArray[i].y);
         bgCtx.lineTo(particleArray[j].x, particleArray[j].y);
         bgCtx.stroke();
