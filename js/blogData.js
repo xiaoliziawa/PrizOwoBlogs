@@ -207,4 +207,28 @@ const blogPosts = [
         link: "https://space.bilibili.com/430008973",
         category: 5
     },
+    {
+        id: 27,
+        title: "LootJS Legacy",
+        description: "LootJS Github Wiki,游戏版本:1.16.5/1.18.2/1.19.2\n 1.19.2的适用于1.20.1\nGithub页面,若打不开请挂木棍",
+        image: "images/lootjs.jpg",
+        link: "https://github.com/AlmostReliable/lootjs/wiki",
+        category: 2
+    },
+    {
+        id: 28,
+        title: "LootJS",
+        description: "LootJS的最新版本Wiki,游戏版本:1.21",
+        image: "images/lootjs.jpg",
+        link: "https://docs.almostreliable.com/lootjs/",
+        category: 2
+    },
+    {
+        id: 29,
+        title: "Feed The Beast",
+        description: "FTB官方网站,上面有许多FTB官方整合包下载,前提是下载FTB官方自己的启动器(吐槽)",
+        image: "images/ftb.svg",
+        link: "https://www.feed-the-beast.com/",
+        category: 1
+    }
 ];
