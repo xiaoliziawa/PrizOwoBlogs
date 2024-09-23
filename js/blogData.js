@@ -10,7 +10,7 @@ const blogPosts = [
     {
         id: 2,
         title: "MC百科",
-        description: "Minecraft资源搜索网站,各种模组,整合包,服务器,应有尽有",
+        description: "Minecraft资源搜索网站，各种模组，整合包，服务器，应有尽有",
         image: "images/mcmod.png",
         link: "https://www.mcmod.cn/",
         category: 1
@@ -66,7 +66,7 @@ const blogPosts = [
     {
         id: 9,
         title: "KubeJS Tutorials",
-        description: "这是KubeJS官方的教程网站,涵盖了许许多多KubeJS6教程,让刚上手KubeJS的玩家也可以快速开始他们的魔改之旅",
+        description: "这是KubeJS官方的教程网站，涵盖了许许多多KubeJS6教程，让刚上手KubeJS的玩家也可以快速开始他们的魔改之旅",
         image: "images/kubejs.png",
         link: "https://kubejs.com/wiki/tutorials/",
         category: 4
@@ -74,7 +74,7 @@ const blogPosts = [
     {
         id: 10,
         title: "latvian.dev Wiki",
-        description: "这是latvian的KubeJS Wiki,虽然是一个较老的KubeJS Wiki,但是里面还是有许多关于KubeJS 5的教程",
+        description: "这是latvian的KubeJS Wiki，虽然是一个较老的KubeJS Wiki，但是里面还是有许多关于KubeJS 5的教程",
         image: "images/latvian.png",
         link: "https://wiki.latvian.dev/",
         category: 4
@@ -90,7 +90,7 @@ const blogPosts = [
     {
         id: 12,
         title: "Plant Minecraft",
-        description: "一个Minecraft的资源网站,MC球",
+        description: "一个Minecraft的资源网站，MC球",
         image: "images/plantmc.png",
         link: "https://www.planetminecraft.com/",
         category: 1
@@ -146,7 +146,7 @@ const blogPosts = [
     {
         id: 19,
         title: "KubeJS 中文论坛",
-        description: "KubeJS 中文论坛,可以翻到许多大佬的教程",
+        description: "KubeJS 中文论坛，可以翻到许多大佬的教程",
         image: "images/kubejs.png",
         link: "https://kjscndev.flarum.cloud/",
         category: 4
@@ -154,7 +154,7 @@ const blogPosts = [
     {
         id: 20,
         title: "数据包生成器",
-        description: "GIthub的源项目Data Pack Generators,可以让你快速生成一个数据包,避免了繁琐的JSON填写过程",
+        description: "GIthub的源项目Data Pack Generators，可以让你快速生成一个数据包，避免了繁琐的JSON填写过程",
         image: "images/icon-creeper.png",
         link: "https://misode.github.io/",
         category: 1
@@ -210,7 +210,7 @@ const blogPosts = [
     {
         id: 27,
         title: "LootJS Legacy",
-        description: "LootJS Github Wiki,游戏版本:1.16.5/1.18.2/1.19.2\n 1.19.2的适用于1.20.1\nGithub页面,若打不开请挂木棍",
+        description: "LootJS Github Wiki，游戏版本:1.16.5/1.18.2/1.19.2\n 1.19.2的适用于1.20.1\nGithub页面，若打不开请挂木棍",
         image: "images/lootjs.jpg",
         link: "https://github.com/AlmostReliable/lootjs/wiki",
         category: 2
@@ -218,7 +218,7 @@ const blogPosts = [
     {
         id: 28,
         title: "LootJS",
-        description: "LootJS的最新版本Wiki,游戏版本:1.21",
+        description: "LootJS的最新版本Wiki，游戏版本:1.21",
         image: "images/lootjs.jpg",
         link: "https://docs.almostreliable.com/lootjs/",
         category: 2
@@ -226,7 +226,7 @@ const blogPosts = [
     {
         id: 29,
         title: "Feed The Beast",
-        description: "FTB官方网站,上面有许多FTB官方整合包下载,前提是下载FTB官方自己的启动器（吐槽）",
+        description: "FTB官方网站，上面有许多FTB官方整合包下载，前提是下载FTB官方自己的启动器（吐槽）",
         image: "images/ftb.svg",
         link: "https://www.feed-the-beast.com/",
         category: 1
