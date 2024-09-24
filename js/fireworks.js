@@ -75,7 +75,7 @@ class HeartParticle {
 }
 
 function createFirework(x, y) {
-  const particleCount = 50;
+  const particleCount = 30; // 将粒子数量从50减少到30
   const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
   const particles = [];
 
@@ -140,41 +140,35 @@ function animate() {
   });
 }
 
-let isMouseDown = false;
-let lastMousePosition = { x: 0, y: 0 };
-
-// document.addEventListener('click', (e) => {
-//   fireworks.push(createFirework(e.clientX, e.clientY));
-// });
-
-document.addEventListener('mousedown', (e) => {
-  isMouseDown = true;
-  lastMousePosition = { x: e.clientX, y: e.clientY };
-});
+let lastFireworkTime = 0;
+const fireworkInterval = 100; // 控制烟花生成的间隔时间（毫秒）
 
 document.addEventListener('mousemove', (e) => {
-  const currentPosition = { x: e.clientX, y: e.clientY };
-  const distance = Math.sqrt(
-    Math.pow(currentPosition.x - lastMousePosition.x, 2) +
-    Math.pow(currentPosition.y - lastMousePosition.y, 2)
-  );
-
-  if (distance > 10) {
-    fireworks.push(createFirework(currentPosition.x, currentPosition.y));
-    lastMousePosition = currentPosition;
+  const currentTime = Date.now();
+  if (currentTime - lastFireworkTime > fireworkInterval) {
+    fireworks.push(createFirework(e.clientX, e.clientY));
+    lastFireworkTime = currentTime;
   }
 });
 
-document.addEventListener('mouseup', () => {
-  isMouseDown = false;
-});
+// 移除这些事件监听器，因为我们不再需要它们
+// document.addEventListener('mousedown', (e) => {
+//   isMouseDown = true;
+//   lastMousePosition = { x: e.clientX, y: e.clientY };
+// });
 
-document.addEventListener('selectstart', (e) => {
-  e.preventDefault();
-});
+// document.addEventListener('mouseup', () => {
+//   isMouseDown = false;
+// });
 
+// 保留点击事件用于创建爱心动画
 document.addEventListener('click', (e) => {
   hearts.push(createHeartAnimation(e.clientX, e.clientY));
+});
+
+// 添加以下代码来防止文本选择
+document.addEventListener('selectstart', (e) => {
+  e.preventDefault();
 });
 
 animate();
@@ -218,7 +212,7 @@ class BackgroundParticle {
 }
 
 const particleArray = [];
-const particleCount = 300;
+const particleCount = 200; // 将背景粒子数量从300减少到200
 
 for (let i = 0; i < particleCount; i++) {
   particleArray.push(new BackgroundParticle());
