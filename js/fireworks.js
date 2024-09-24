@@ -151,22 +151,13 @@ document.addEventListener('mousemove', (e) => {
   }
 });
 
-// 移除这些事件监听器，因为我们不再需要它们
-// document.addEventListener('mousedown', (e) => {
-//   isMouseDown = true;
-//   lastMousePosition = { x: e.clientX, y: e.clientY };
-// });
 
-// document.addEventListener('mouseup', () => {
-//   isMouseDown = false;
-// });
 
-// 保留点击事件用于创建爱心动画
 document.addEventListener('click', (e) => {
   hearts.push(createHeartAnimation(e.clientX, e.clientY));
 });
 
-// 添加以下代码来防止文本选择
+// 防止文本选择
 document.addEventListener('selectstart', (e) => {
   e.preventDefault();
 });
