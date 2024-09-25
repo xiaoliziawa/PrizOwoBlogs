@@ -231,4 +231,12 @@ const blogPosts = [
         link: "https://www.feed-the-beast.com/",
         category: 1
     },
+    {
+        id: 30,
+        title: "LootJS教程",
+        description: "由Crychic团队托管的中文LootJS教程",
+        image: "images/Crychic.png",
+        link: "https://docs.mihono.cn/zh/modpack/kubejs/1.20.1/Introduction/Addon/LootJs/LootJs",
+        category: 2
+    }
 ];

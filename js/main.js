@@ -114,10 +114,6 @@ document.addEventListener('DOMContentLoaded', function () {
         createFirework(e.clientX, e.clientY);
     });
 
-    // document.addEventListener('click', (e) => {
-    //     createFirework(e.clientX, e.clientY);
-    // });
-
     function createFirework(x, y) {
         const firework = document.createElement('div');
         firework.className = 'firework';
