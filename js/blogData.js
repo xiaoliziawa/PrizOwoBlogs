@@ -27,7 +27,7 @@ const blogPosts = [
         id: 4,
         title: "Minecraft Wiki",
         description: "Minecraft 中文Wiki是一个由玩家和开发者共同维护的关于Minecraft的百科全书。\n 在这上面你可以查询任何关于Minecraft的资料以及更新信息",
-        image: "https://th.bing.com/th/id/OIP.CV9L-PCKb75C6twh5-x52QAAAA?w=156&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+        image: "images/Wiki.webp",
         link: "https://zh.minecraft.wiki/",
         category: 1
     },
@@ -51,7 +51,7 @@ const blogPosts = [
         id: 7,
         title: "芒果的KubeJS笔记",
         description: "一些關於 Minecraft 的 KubeJS 筆記",
-        image: "https://kubejs-notes.pages.dev/logo.png",
+        image: "images/mangokubejs.png",
         link: "https://kubejs-notes.pages.dev/zh-tw/",
         category: 4
     },
@@ -238,5 +238,21 @@ const blogPosts = [
         image: "images/Crychic.png",
         link: "https://docs.mihono.cn/zh/modpack/kubejs/1.20.1/Introduction/Addon/LootJs/LootJs",
         category: 2
-    }
+    },
+    {
+        id: 30,
+        title: "苦力怕论坛",
+        description: "一个关于Minecraft的中文论坛，里面有着丰富的资源提玩家下载",
+        image: "images/klplt.png",
+        link: "https://klpbbs.com/",
+        category: 1
+    },
+    {
+        id: 31,
+        title: "MineBBS",
+        description: "以Minecraft我的世界内容为主的中文论坛。面向我的世界玩家、服主、创作者，提供简洁好用的交流讨论和资源分享平台",
+        image: "images/minebbs.png",
+        link: "https://www.minebbs.com/ ",
+        category: 1
+    },
 ];
