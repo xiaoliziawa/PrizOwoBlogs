@@ -255,4 +255,44 @@ const blogPosts = [
         link: "https://www.minebbs.com/ ",
         category: 1
     },
+    {
+        id: 32,
+        title: "ModPack Index",
+        description: "一个根据相关性来搜索Minecraft整合包的网站",
+        image: "images/modpackindex.jpg",
+        link: "https://www.modpackindex.com/modpacks ",
+        category: 1
+    },
+    {
+        id: 33,
+        title: "BlockBench",
+        description: "建模或者皮肤绘画工具网站",
+        image: "images/blockbench.jpg",
+        link: "https://www.blockbench.net",
+        category: 1
+    },
+    {
+        id: 34,
+        title: "像素茶艺地图站",
+        description: "一个由国人制作的Minecraft地图下载，上传网站",
+        image: "images/xinagsuchayi.webp",
+        link: "https://pixelmap.minegraph.cn/",
+        category: 1
+    },
+    {
+        id: 35,
+        title: "Chunk Base",
+        description: "Minecraft种子查询网站，输入种子后可以查询该世界的各种建筑，群系，遗迹等信息",
+        image: "images/chunkbase.jpg",
+        link: "https://www.chunkbase.com/",
+        category: 1
+    },
+    {
+        id: 36,
+        title: "VM汉化组",
+        description: "一个由国人团队领导的汉化组，提供汉化整合包，模组等服务",
+        image: "images/vm.png",
+        link: "https://vmct-cn.top/",
+        category: 1
+    },
 ];
