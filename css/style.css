@@ -1047,3 +1047,15 @@ header {
     border-top: 5px solid var(--secondary-color);
 }
 
+.card.expandable {
+    cursor: pointer;
+}
+
+.card.expandable .card-content {
+    max-height: 100px; /* 或其他适当的高度 */
+    overflow: hidden;
+}
+
+.card.expanded .card-content {
+    max-height: none;
+}
