@@ -180,7 +180,7 @@ h2::after {
 .card {
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -189,13 +189,43 @@ h2::after {
     border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
     backdrop-filter: blur(5px);
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+    background-size: 400% 400%;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+    animation: rgbBorder 3s ease infinite;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(74, 225, 233, 0.1);
-    border-color: var(--primary-color);
-    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 15px rgba(74, 225, 233, 0.2);
+}
+
+@keyframes rgbBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .card-content {
@@ -1016,3 +1046,4 @@ header {
     padding: 10px 0;
     border-top: 5px solid var(--secondary-color);
 }
+
