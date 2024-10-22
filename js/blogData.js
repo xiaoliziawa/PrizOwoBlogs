@@ -290,7 +290,7 @@ const blogPosts = [
     {
         id: 36,
         title: "VM汉化组",
-        description: "一个由国人团队领导的汉化组，提供汉化整合包，模组等服务",
+        description: "一个由国人团队领导的汉化组，提供整合包汉化，地图汉化等服务",
         image: "images/vm.png",
         link: "https://vmct-cn.top/",
         category: 1
