@@ -75,7 +75,7 @@ class HeartParticle {
 }
 
 function createFirework(x, y) {
-  const particleCount = 30; // 将粒子数量从50减少到30
+  const particleCount = 30;
   const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
   const particles = [];
 
@@ -141,7 +141,7 @@ function animate() {
 }
 
 let lastFireworkTime = 0;
-const fireworkInterval = 100; // 控制烟花生成的间隔时间（毫秒）
+const fireworkInterval = 100;
 
 document.addEventListener('mousemove', (e) => {
   const currentTime = Date.now();
@@ -157,7 +157,6 @@ document.addEventListener('click', (e) => {
   hearts.push(createHeartAnimation(e.clientX, e.clientY));
 });
 
-// 防止文本选择
 document.addEventListener('selectstart', (e) => {
   e.preventDefault();
 });
@@ -195,7 +194,7 @@ class BackgroundParticle {
   }
 
   draw() {
-    bgCtx.fillStyle = 'rgba(74, 225, 233, 0.7)'; // 增加不透明度，使粒子更亮
+    bgCtx.fillStyle = 'rgba(74, 225, 233, 0.7)';
     bgCtx.beginPath();
     bgCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     bgCtx.fill();
@@ -203,7 +202,7 @@ class BackgroundParticle {
 }
 
 const particleArray = [];
-const particleCount = 200; // 将背景粒子数量从300减少到200
+const particleCount = 200;
 
 for (let i = 0; i < particleCount; i++) {
   particleArray.push(new BackgroundParticle());

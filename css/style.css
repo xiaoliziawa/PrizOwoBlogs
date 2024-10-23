@@ -1099,13 +1099,20 @@ header {
     height: 40px;
     cursor: pointer;
     transition: 0.3s;
+    z-index: 1001; /* 确保按钮在最上层 */
+    display: flex;  /* 使用 flex 布局使图标居中 */
+    align-items: center;
+    justify-content: center;
 }
 
 #back-to-top:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
-/* 导航菜单项样式优化 */
+#back-to-top i {
+    font-size: 20px;
+}
+
 .menu-items li a {
     display: flex;
     align-items: center;
@@ -1118,7 +1125,6 @@ header {
     text-align: center;
 }
 
-/* 页脚社交链接 */
 .social-links {
     margin-top: 10px;
 }

@@ -109,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // 修改烟花效果触发方式
     document.addEventListener('mousemove', (e) => {
         createFirework(e.clientX, e.clientY);
     });

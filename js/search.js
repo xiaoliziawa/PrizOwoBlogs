@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchBtn = document.getElementById('search-btn');
     const backToTop = document.getElementById('back-to-top');
 
-    // 搜索功能
     function performSearch() {
         const searchTerm = searchInput.value.toLowerCase();
         const cards = document.querySelectorAll('.card');
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // 重新排列可见卡片
         const cardContainers = document.querySelectorAll('.card-container');
         cardContainers.forEach(container => {
             const visibleCards = container.querySelectorAll('.card[style*="opacity: 1"]');
@@ -44,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 清空搜索时恢复所有卡片
     searchInput.addEventListener('input', function(e) {
         if (e.target.value === '') {
             const cards = document.querySelectorAll('.card');
@@ -63,19 +60,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 返回顶部按钮
-    window.onscroll = function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            backToTop.style.display = "block";
-        } else {
-            backToTop.style.display = "none";
-        }
-    };
-
-    backToTop.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (backToTop) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 20) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
         });
-    });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
