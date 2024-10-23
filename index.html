@@ -23,6 +23,10 @@
         <div class="container">
             <h1>PrizOwO'Blog</h1>
             <nav id="top-nav">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="搜索文章...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
                 <div class="nav-icons">
                     <div class="hamburger-menu">
                         <div class="hamburger-icon">
@@ -31,11 +35,12 @@
                             <span></span>
                         </div>
                         <ul class="menu-items">
-                            <li><a href="#category1">资源</a></li>
-                            <li><a href="#category2">Mod使用教程</a></li>
-                            <li><a href="#category3">Custom Machinery</a></li>
-                            <li><a href="#category4">KubeJS</a></li>
-                            <li><a href="#category5">B站UP主</a></li>
+                            <li><a href="#intro"><i class="fas fa-home"></i> 首页</a></li>
+                            <li><a href="#category1"><i class="fas fa-download"></i> 资源</a></li>
+                            <li><a href="#category2"><i class="fas fa-book"></i> Mod使用教程</a></li>
+                            <li><a href="#category3"><i class="fas fa-cogs"></i> Custom Machinery</a></li>
+                            <li><a href="#category4"><i class="fas fa-code"></i> KubeJS</a></li>
+                            <li><a href="#category5"><i class="fas fa-video"></i> B站UP主</a></li>
                         </ul>
                     </div>
                     <a href="https://github.com/xiaoliziawa/PrizOwoBlogs" target="_blank" class="github-link">
@@ -48,6 +53,13 @@
     </header>
 
     <main>
+        <section id="intro" class="intro-section">
+            <div class="container">
+                <h2>欢迎来到 PrizOwO 的博客</h2>
+                <p>这里收集了各种 Minecraft 模组的教程、资源以及实用工具。希望能帮助到您！</p>
+            </div>
+        </section>
+
         <section id="category1">
             <h2>资源</h2>
             <div class="card-container" data-category="1">
@@ -80,12 +92,21 @@
     <footer>
         <div class="container">
             <p>&copy; PrizOwO's Blogs | Open Source</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-bilibili"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
         </div>
     </footer>
+
+    <button id="back-to-top" title="返回顶部">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/blogData.js"></script>
     <script src="js/main.js"></script>
     <script src="js/fireworks.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>

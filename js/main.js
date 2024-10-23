@@ -85,27 +85,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // 添加 adjustCardLayout 函数定义
-    function adjustCardLayout() {
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            const content = card.querySelector('.card-content');
-            const title = card.querySelector('h3'); // 修改这里，因为标题是 h3 元素
-            if (content && title) { // 添加检查
-                if (content.scrollHeight > content.clientHeight || title.scrollHeight > title.clientHeight) {
-                    card.classList.add('expandable');
-                } else {
-                    card.classList.remove('expandable');
-                }
-            }
-        });
-    }
-
-    // 在文档加载完成后调用 adjustCardLayout
+    window.addEventListener('resize', adjustCardLayout);
     adjustCardLayout();
 
-    // 在窗口大小改变时重新调整布局
-    window.addEventListener('resize', adjustCardLayout);
 
     function forceRefresh() {
         location.reload(true);
@@ -115,13 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return url + '?v=' + Math.random();
     }
 
-    // 修改这部分代码
-    const mainStylesheet = document.getElementById('mainStylesheet');
-    if (mainStylesheet) {
-        mainStylesheet.href = addRandomQueryToURL('css/style.css');
-    } else {
-        console.warn('Element with id "mainStylesheet" not found');
-    }
+    document.getElementById('mainStylesheet').href = addRandomQueryToURL('css/style.css');
 
     document.querySelectorAll('.menu-items a').forEach(link => {
         link.addEventListener('click', function (e) {
