@@ -1063,6 +1063,17 @@ header {
     width: 200px;
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 225, 233, 0.5);
 }
 
 #search-btn {
@@ -1139,4 +1150,6 @@ header {
 .social-links a:hover {
     color: #007bff;
 }
+
+
 

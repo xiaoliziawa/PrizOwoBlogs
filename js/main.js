@@ -124,4 +124,24 @@ document.addEventListener('DOMContentLoaded', function () {
             firework.remove();
         }, 1000);
     }
+
+    document.addEventListener('mousedown', function(e) {
+        // 排除搜索框
+        if (e.target.id === 'search-input') {
+            return;
+        }
+        
+        // 防止文本选择
+        e.preventDefault();
+    });
+
+    document.addEventListener('selectstart', function(e) {
+        // 排除搜索框
+        if (e.target.id === 'search-input') {
+            return;
+        }
+        
+        // 防止文本选择
+        e.preventDefault();
+    });
 });

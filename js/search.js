@@ -5,13 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function performSearch() {
         const searchTerm = searchInput.value.toLowerCase();
+        const pinyinSearchTerm = pinyinPro.pinyin(searchTerm, { toneType: 'none', type: 'array' }).join('').toLowerCase();
         const cards = document.querySelectorAll('.card');
         
         cards.forEach(card => {
             const title = card.querySelector('h3').textContent.toLowerCase();
             const content = card.querySelector('p').textContent.toLowerCase();
+            const pinyinTitle = pinyinPro.pinyin(title, { toneType: 'none', type: 'array' }).join('').toLowerCase();
+            const pinyinContent = pinyinPro.pinyin(content, { toneType: 'none', type: 'array' }).join('').toLowerCase();
             
-            if (title.includes(searchTerm) || content.includes(searchTerm)) {
+            if (title.includes(searchTerm) || content.includes(searchTerm) ||
+                pinyinTitle.includes(pinyinSearchTerm) || pinyinContent.includes(pinyinSearchTerm)) {
                 card.style.opacity = '1';
                 card.style.visibility = 'visible';
                 card.style.position = 'relative';
@@ -36,7 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     searchBtn.addEventListener('click', performSearch);
-    searchInput.addEventListener('keypress', function(e) {
+    
+    searchInput.addEventListener('keydown', function(e) {
+        // 允许所有默认的快捷键行为
+        if (e.ctrlKey || e.metaKey) {
+            return;
+        }
+        
         if (e.key === 'Enter') {
             performSearch();
         }
@@ -58,6 +68,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 section.style.display = 'block';
             });
         }
+    });
+
+    // 确保搜索框可以正常选择文本
+    searchInput.addEventListener('mousedown', function(e) {
+        e.stopPropagation();
+    });
+
+    searchInput.addEventListener('selectstart', function(e) {
+        e.stopPropagation();
     });
 
     if (backToTop) {
