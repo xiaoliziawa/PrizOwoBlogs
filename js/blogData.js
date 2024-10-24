@@ -318,5 +318,13 @@ const blogPosts = [
         image: "images/loquat.png",
         link: "https://loquat.readthedocs.io/en/docs-1.20/",
         category: 2
+    },
+    {
+        id: 40,
+        title: "CraftTweaker Wiki",
+        description: "CraftTweaker的官方教程文档 \n 涵盖了从1.12.2到1.21.1的文档教程，可以快速查询到一些Forge/NeoForge/的API",
+        image: "images/ct.jpg",
+        link: "https://docs.blamejared.com/",
+        category: 7
     }
 ];
