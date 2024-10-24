@@ -295,4 +295,28 @@ const blogPosts = [
         link: "https://vmct-cn.top/",
         category: 1
     },
+    {
+        id: 37,
+        title: "aseprite",
+        description: "一个免费的像素画软件，可选付费，已经在Github开源 \n 可进入Github下载开源免费版本",
+        image: "images/ase.png",
+        link: "https://www.aseprite.org/",
+        category: 6
+    },
+    {
+        id: 38,
+        title: "Adobe Photoshop",
+        description: "破解版Ps软件下载，支持到Ps 2024。  \n 以及更早的Ps 2021",
+        image: "images/ps.png",
+        link: "https://www.123pan.com/s/N7M7Vv-3s9od.html",
+        category: 6
+    },
+    {
+        id: 39,
+        title: "Loquat 枇杷模组",
+        description: "这是Loquat模组的官方1.20.1版本的教程文档",
+        image: "images/loquat.png",
+        link: "https://loquat.readthedocs.io/en/docs-1.20/",
+        category: 2
+    }
 ];
